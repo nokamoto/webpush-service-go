@@ -21,3 +21,23 @@ jobs:
             go get -u github.com/golang/dep/cmd/dep
             dep ensure -vendor-only=true
             go test .
+  dist:
+    docker:
+      - image: docker:18.06.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Docker build & push
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            ./build.sh --push
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - build
+      - dist:
+          requires:
+            - build

@@ -26,15 +26,15 @@
   version = "v1.2.0"
 
 [[projects]]
-  branch = "master"
-  digest = "1:c7ab321b5fa42850bd3b7b0411b1a73ef0e4e3c6a48ae4f38e860a3d03d02c64"
+  digest = "1:175fee0f40658bf260718dc1bb46731addb7aea4615dbca58e9475ae33bbeac1"
   name = "github.com/nokamoto/webpush-go"
   packages = [
     ".",
     "types/webpush/protobuf",
   ]
   pruneopts = "UT"
-  revision = "4c13dee835e3e47bc3eced182f283b0ea66311d6"
+  revision = "601e07973c488ec54c70eb99c3b19b03501600bf"
+  version = "v0.0.1"
 
 [[projects]]
   branch = "master"
